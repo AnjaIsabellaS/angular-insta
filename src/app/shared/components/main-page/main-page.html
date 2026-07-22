@@ -1,7 +1,7 @@
 @for (post of posts; track post.name) {
   <div class="post">
-    <p>{{ post.name }}</p>
-    <img [src]="post.img" [alt]="post.name" />
-    <p>{{ post.Likes }}</p>
+    <p>Name: {{ post.name }}</p>
+    <img class="post-image" [src]="post.img" [alt]="post.name" />
+    <p>Likes: {{ post.Likes }}</p>
   </div>
 }
