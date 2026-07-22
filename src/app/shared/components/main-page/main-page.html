@@ -1,1 +1,7 @@
-<p>main-page works!</p>
+@for (post of posts; track post.name) {
+  <div class="post">
+    <p>{{ post.name }}</p>
+    <img [src]="post.img" [alt]="post.name" />
+    <p>{{ post.Likes }}</p>
+  </div>
+}
