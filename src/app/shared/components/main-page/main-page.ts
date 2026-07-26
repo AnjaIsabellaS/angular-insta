@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Post {
-  name: string;
-  img: string;
-  Likes: number;
-}
+import { Post } from '../../interfaces/post';
 
 @Component({
   selector: 'app-main-page',
