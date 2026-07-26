@@ -15,7 +15,12 @@ export class MainPage {
   ];
 
   toggleLike(post: Post): void {
-    post.isLiked = !post.isLiked;
-    post.Likes += post.isLiked ? 1 : -1;
+    if (post.isLiked) {
+      post.isLiked = false;
+      post.Likes = post.Likes - 1;
+    } else {
+      post.isLiked = true;
+      post.Likes = post.Likes + 1;
+    }
   }
 }
