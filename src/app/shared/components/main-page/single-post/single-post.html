@@ -1,0 +1,21 @@
+<div class="post">
+  <p>Name: {{ post().name }}</p>
+  <img class="post-image" [src]="post().img" [alt]="post().name" />
+  @if (post().isLiked) {
+    <img
+      class="heart-icon"
+      src="images/heart-red.png"
+      alt="Liked"
+      (click)="toggleLike()"
+    />
+  } @else {
+    <img
+      class="heart-icon"
+      src="images/heart-black.png"
+      alt="Not liked"
+      (click)="toggleLike()"
+    />
+  }
+  <p>Likes: {{ post().Likes }}</p>
+</div>
+
