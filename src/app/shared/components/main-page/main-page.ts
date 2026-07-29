@@ -35,6 +35,9 @@ export class MainPage {
     comments: [],
   },
 ];
+
+/*Fügt einen neuen Kommentar zum comments-Array des jeweiligen Posts hinzu 
+(per push) — reagiert auf das commentAdded-Event aus der Kindkomponente.*/
 onCommentAdded(post: Post, comment: Comment) {
   post.comments.push(comment);
 }
