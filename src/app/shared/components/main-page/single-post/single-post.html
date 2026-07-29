@@ -17,5 +17,10 @@
     />
   }
   <p>Likes: {{ post().Likes }}</p>
+  <div class="comments">
+  @for (comment of post().comments; track comment.id) {
+    <p class="comment"><strong>{{ comment.author }}:</strong> {{ comment.text }}</p>
+  }
+</div>
 </div>
 
