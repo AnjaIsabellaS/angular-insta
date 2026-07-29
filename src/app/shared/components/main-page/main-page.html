@@ -1,4 +1,4 @@
 @for (post of posts; track post.name) {
-  <app-single-post [post]="post" />
+  <app-single-post [post]="post" (commentAdded)="onCommentAdded(post, $event)" />
 }
 

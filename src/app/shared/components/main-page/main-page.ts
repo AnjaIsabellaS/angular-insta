@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post } from '../../interfaces/post';
+import { Post, Comment } from '../../interfaces/post';
 import { SinglePost } from './single-post/single-post';
 
 @Component({
@@ -35,4 +35,7 @@ export class MainPage {
     comments: [],
   },
 ];
+onCommentAdded(post: Post, comment: Comment) {
+  post.comments.push(comment);
+}
 }

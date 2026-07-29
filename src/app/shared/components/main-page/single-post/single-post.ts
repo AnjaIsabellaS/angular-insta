@@ -1,5 +1,5 @@
-import { Component, input, signal } from '@angular/core';
-import { Post } from '../../../interfaces/post';
+import { Component, input, signal, output } from '@angular/core';
+import { Post, Comment } from '../../../interfaces/post';
 import { form, FormField } from '@angular/forms/signals';
 
 @Component({
@@ -13,6 +13,8 @@ export class SinglePost {
 
   commentInput = form(signal(''));
 
+  commentAdded = output<Comment>();
+
   addComment() {
   const commentUser =  this.commentInput().value().trim(); /* die Variable commentUser
   enthält den ausgelesenen Text, der Leerzeichen mit trim() entfernt*/
@@ -21,10 +23,7 @@ export class SinglePost {
     return;
   } /*Dieser Test verhindert, dass leere Kommentare ins Array gehen, wenn ein User auf "Send" klickt ohne etwas einzugeben*/
   
-this.post().comments.push({
-  author: 'Du',
-  text: commentUser,
-});
+this.commentAdded.emit({author: 'Du', text: commentUser});
 
 this.commentInput().value.set('');
 
