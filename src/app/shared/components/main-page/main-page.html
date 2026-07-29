@@ -1,3 +1,5 @@
+<!-- (commentAdded)="onCommentAdded(post, $event)": reagiert auf das Output-Event der Kindkomponente und leitet neue Kommentare 
+an onCommentAdded() in der Parent-Komponente weiter.-->
 @for (post of posts; track post.name) {
   <app-single-post [post]="post" (commentAdded)="onCommentAdded(post, $event)" />
 }
