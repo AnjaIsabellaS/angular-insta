@@ -16,8 +16,8 @@ export class MainPage {
     Likes: 95,
     isLiked: false,
     comments: [
-      { id: 1, author: 'Charlotte', text: 'Schöne Banane!' },
-      { id: 2, author: 'Lisa', text: 'Nice' },
+      { author: 'Charlotte', text: 'Schöne Bananen!' },
+      { author: 'Lisa', text: 'Nice' },
     ],
   },
   {
@@ -25,7 +25,7 @@ export class MainPage {
     img: 'images/orange.jpg',
     Likes: 3,
     isLiked: false,
-    comments: [{ id: 3, author: 'Anja', text: 'Yummy!' }],
+    comments: [{ author: 'Anja', text: 'Yummy!' }],
   },
   {
     name: 'Lisa',
