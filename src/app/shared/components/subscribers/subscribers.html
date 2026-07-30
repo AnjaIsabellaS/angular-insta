@@ -1,0 +1,21 @@
+@for (subscriber of subscribers; track subscriber.name) {
+  <div class="subscriber-row">
+    <div class="subscriber-box">
+      <p>{{ subscriber.name }}</p>
+      @if (subscriber.isFollowing) {
+        <p>Folgt dir.</p>
+      } @else {
+        <p>Folgt dir nicht.</p>
+      }
+    </div>
+
+    @if (subscriber.isFollowing) {
+      <a (click)="toggleFollow(subscriber)">Nicht mehr Folgen</a>
+    } @else {
+      <a (click)="toggleFollow(subscriber)">Folgen</a>
+    }
+  </div>
+}
+
+
+
